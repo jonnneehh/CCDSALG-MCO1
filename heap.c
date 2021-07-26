@@ -58,7 +58,7 @@ void heapify(int arr[], int n, int i, int *count)
 }
   
 // Main function to do heap sort
-void heapSort(int arr[], int n) 
+int heapSort(int arr[], int n) 
 {
     // Build max heap
     int count = 1;
@@ -87,6 +87,8 @@ void heapSort(int arr[], int n)
         heapify(arr, i, 0, &count);
         count++;
     }
+
+    return count;
 
 }
   
