@@ -1,6 +1,7 @@
 #include<stdio.h>
-int quicksort(int number[25],int first,int last){
-   int i, j, pivot, temp, count;
+long int quicksort(int number[],int first,int last){
+   int i, j, pivot, temp;
+   long int count = 1;
    
    count++; //Check if statement
    if(first<last){  

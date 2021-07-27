@@ -3,11 +3,10 @@
 #include <stdio.h>
  
 /* Function to sort an array using insertion sort*/
-int insertionSort(int arr[], int n)
+long int insertionSort(int arr[], int n)
 {
-    int i, key, j, count;
-    
-    count = 1;
+    int i, key, j;
+	long int count = 1;
     
     count++; // enter loop
     for (i = 1; i < n; i++) {

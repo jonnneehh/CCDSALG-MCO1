@@ -5,9 +5,9 @@
 // Merges two subarrays of arr[].
 // First subarray is arr[l..m]
 // Second subarray is arr[m+1..r]
-int merge(int arr[], int l, int m, int r)
+long int merge(int arr[], int l, int m, int r)
 {
-    int count = 0;
+    long int count = 0;
     
 	int i, j, k;
     int n1 = m - l + 1;
@@ -90,9 +90,9 @@ int merge(int arr[], int l, int m, int r)
 
 /* l is for left index and r is right index of the
 sub-array of arr to be sorted */
-int mergeSort(int arr[], int l, int r)
+long int mergeSort(int arr[], int l, int r)
 {
-    int count = 0;
+    long int count = 1;
     
 	count++; //If statement conditions
 	if (l < r) {

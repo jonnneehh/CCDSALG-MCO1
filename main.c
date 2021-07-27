@@ -3,7 +3,7 @@
 int data[MAX_N];
 
 int main (){
-	int count = 0;
+	long int count = 0;
 	int smallData[SMALL_DATA_N] = {10, -1, 3, 2, 5, 0, 1, 221, 31, -31};
 	
 	printf("Generating Data...\n");
@@ -13,11 +13,11 @@ int main (){
 	//printArray(data, MAX_N);
 	
 	printf("Sorting Data...\n");
-	count = quicksort(data, 0, MAX_N - 1);
+	count = selectionSort(data, MAX_N);
 	
 	printf("Sorted Array:\n");
 	//printArray(data, MAX_N);
 	
-	printf("\ncount = %d", count);
+	printf("\ncount = %ld", count);
 	return 0;
 }

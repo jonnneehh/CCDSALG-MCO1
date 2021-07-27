@@ -7,9 +7,9 @@
 #include "insertion.c"
 #include "selection.c"
 #include "bubble.c"
-//#include "heap.c"
+#include "heap.c"
 
-#define MAX_N 1048576
+#define MAX_N 65536
 
 void printArray(int arr[], int n)
 {

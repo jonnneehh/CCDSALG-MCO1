@@ -1,6 +1,6 @@
 #include <stdio.h>
  
-void swap(int *xp, int *yp, int *count)
+void swap(int *xp, int *yp, long int *count)
 {   
     int temp = *xp;
     (*count)++;
@@ -13,9 +13,10 @@ void swap(int *xp, int *yp, int *count)
 }
  
 // A function to implement bubble sort
-int bubbleSort(int arr[], int n)
+long int bubbleSort(int arr[], int n)
 {
-   int i, j, count;
+   int i, j;
+   long int count;
 
    count = 1;
 

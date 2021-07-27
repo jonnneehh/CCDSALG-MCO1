@@ -13,9 +13,10 @@ void swapSelection(int *xp, int *yp, int *count)
     count++; // add count when line above is executed
 }
  
-int selectionSort(int arr[], int n)
+long int selectionSort(int arr[], int n)
 {
-    int i, j, min_idx, count;
+    int i, j, min_idx;
+	long int count;
     
     count = 1;
  
