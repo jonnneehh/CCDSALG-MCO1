@@ -1,23 +1,21 @@
-#include <stdio.h>
-#include "insertion.c"
-
-void printArray(int arr[], int n)
-{
-    int i;
-    for (i = 0; i < n; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-}
+#include "SystemManagers.c"
 
 int main (){
 	int count = 0;
+	int data[MAX_N];
 	
-	int a[10] = {9, 8, 7, 5, 6, 3, 2, 1, -2, 9};
-	printArray(a, 10);
-	printf("\ncount = %d\n\n\n", count);
+	printf("Generating Data...\n");
+	generateData(data, 1024);
 	
-	count = insertionSort(a, 10);
-	printArray(a, 10);
+	printf("Unsorted Array:\n");
+	printArray(data, 1024);
+	
+	printf("Sorting Data...\n");
+	count = quicksort(data, 0, 1023);
+	
+	printf("Sorted Array:\n");
+	printArray(data, 1024);
+
 	printf("\ncount = %d", count);
 	
 	return 0;
