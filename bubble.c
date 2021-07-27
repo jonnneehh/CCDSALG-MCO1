@@ -3,13 +3,13 @@
 void swap(int *xp, int *yp, int *count)
 {   
     int temp = *xp;
-    *count++;
+    (*count)++;
 
     *xp = *yp;
-    *count++;
+    (*count)++;
 
     *yp = temp;
-    *count++;
+    (*count)++;
 }
  
 // A function to implement bubble sort
@@ -46,11 +46,3 @@ int bubbleSort(int arr[], int n)
              
 }
  
-/* Function to print an array */
-void printArray(int arr[], int size)
-{
-    int i;
-    for (i=0; i < size; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-}

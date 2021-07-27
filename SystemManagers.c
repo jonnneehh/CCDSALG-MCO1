@@ -6,6 +6,8 @@
 #include "merge.c"
 #include "insertion.c"
 #include "selection.c"
+#include "bubble.c"
+#include "heap.c"
 
 #define MAX_N 1024
 
