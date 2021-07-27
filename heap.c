@@ -5,13 +5,13 @@
 void swap(int *a, int *b, int *count) 
 {
     int temp = *a;
-    *count++;
+    (*count)++;
 
     *a = *b;
-    *count++;
+    (*count)++;
 
     *b = temp;
-    *count++;
+    (*count)++;
 }
   
 void heapify(int arr[], int n, int i, int *count) 
@@ -20,38 +20,38 @@ void heapify(int arr[], int n, int i, int *count)
    
 
     int largest = i;
-    *count++;
+    (*count)++;
 
     int left = 2 * i + 1;
-    *count++;
+    (*count)++;
 
     int right = 2 * i + 2;
-    *count++;
+    (*count)++;
     
-    *count++;
+    (*count)++;
     if (left < n && arr[left] > arr[largest])
     {   
-        *count++;
+        (*count)++;
         largest = left;
     }
       
-    *count++;
+    (*count)++;
     if (right < n && arr[right] > arr[largest])
     {
-        *count++;
+        (*count)++;
         largest = right;
 
     }
       
   
     // Swap and continue heapifying if root is not largest
-    *count++;
+    (*count)++;
     if (largest != i) 
     {
-        *count++;
+        (*count)++;
         swap(&arr[i], &arr[largest], count);
 
-        *count++;
+        (*count)++;
         heapify(arr, n, largest, count);
     }
 

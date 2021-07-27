@@ -3,13 +3,13 @@
 void swap(int *xp, int *yp, int *count)
 {   
     int temp = *xp;
-    *count++;
+    (*count)++;
 
     *xp = *yp;
-    *count++;
+    (*count)++;
 
     *yp = temp;
-    *count++;
+    (*count)++;
 }
  
 // A function to implement bubble sort
