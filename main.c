@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "merge.c"
+#include "insertion.c"
 
 void printArray(int arr[], int n)
 {
@@ -16,8 +16,9 @@ int main (){
 	printArray(a, 10);
 	printf("\ncount = %d\n\n\n", count);
 	
-	count = mergeSort(a, 0, 9);
+	count = insertionSort(a, 10);
 	printArray(a, 10);
 	printf("\ncount = %d", count);
+	
 	return 0;
 }
