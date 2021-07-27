@@ -1,16 +1,16 @@
 // C program for implementation of selection sort
 #include <stdio.h>
  
-void swap(int *xp, int *yp int *count)
+void swapSelection(int *xp, int *yp, int *count)
 {
     int temp = *xp;
-    *count++; // add count when line above is executed
+    count++; // add count when line above is executed
     
     *xp = *yp;
-    *count++; // add count when line above is executed
+    count++; // add count when line above is executed
     
     *yp = temp;
-    *count++; // add count when line above is executed
+    count++; // add count when line above is executed
 }
  
 int selectionSort(int arr[], int n)
@@ -24,8 +24,10 @@ int selectionSort(int arr[], int n)
     for (i = 0; i < n-1; i++)
     {
     	count++; // count per loop run
+    	
         // Find the minimum element in unsorted array
         min_idx = i;
+        count++; // add to count when min_idx is assigned
         
         count++; // add count when loop is entered
         for (j = i+1; j < n; j++){
@@ -38,18 +40,9 @@ int selectionSort(int arr[], int n)
 			}
 		}
         // Swap the found minimum element with the first element
-        swap(&arr[min_idx], &arr[i],&count);
+        swapSelection(&arr[min_idx], &arr[i],&count);
         count++; // add count when swap is called
     }
     
     return count; // returns final value for count
-}
- 
-/* Function to print an array */
-void printArray(int arr[], int size)
-{
-    int i;
-    for (i=0; i < size; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
 }

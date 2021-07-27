@@ -2,12 +2,12 @@
 #include <time.h>
 #include <stdlib.h>
 
-#include "quick.c"
-#include "merge.c"
+//#include "quick.c"
+//#include "merge.c"
 #include "insertion.c"
 #include "selection.c"
-#include "bubble.c"
-#include "heap.c"
+//#include "bubble.c"
+//#include "heap.c"
 
 #define MAX_N 1024
 
@@ -27,6 +27,7 @@ int generateData(int data[MAX_N], int numOfData){
 	for(i = 0; i < numOfData; i++){
 		data[i] = rand();
 	}
+	
 	return data;
 }
 
