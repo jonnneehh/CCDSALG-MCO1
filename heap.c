@@ -76,7 +76,7 @@ int heapSort(int arr[], int n)
   
     // Heap sort
     count++;
-    for (int i = n - 1; i >= 0; i--) 
+    for (i = n - 1; i >= 0; i--) 
     {   
         count++;
         
