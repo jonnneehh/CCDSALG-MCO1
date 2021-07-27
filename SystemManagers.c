@@ -4,6 +4,8 @@
 
 #include "quick.c"
 #include "merge.c"
+#include "bubble.c"
+#include "heap.c"
 
 #define MAX_N 1024
 
