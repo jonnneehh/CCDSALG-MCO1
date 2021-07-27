@@ -2,7 +2,7 @@
 #include <stdio.h>
   
 // Function to swap the the position of two elements
-void swap(int *a, int *b, int *count) 
+void swapHeap(int *a, int *b, int *count) 
 {
     int temp = *a;
     (*count)++;
@@ -49,7 +49,7 @@ void heapify(int arr[], int n, int i, int *count)
     if (largest != i) 
     {
         (*count)++;
-        swap(&arr[i], &arr[largest], count);
+        swapHeap(&arr[i], &arr[largest], count);
 
         (*count)++;
         heapify(arr, n, largest, count);
@@ -61,10 +61,10 @@ void heapify(int arr[], int n, int i, int *count)
 int heapSort(int arr[], int n) 
 {
     // Build max heap
-    int count = 1;
+    int count = 1, i;
     
     count++;
-    for (int i = n / 2 - 1; i >= 0; i--)
+    for (i = n / 2 - 1; i >= 0; i--)
     {   
         count++; //counts when it cycles the loop again
 
@@ -80,7 +80,7 @@ int heapSort(int arr[], int n)
     {   
         count++;
         
-        swap(&arr[0], &arr[i], &count);
+        swapHeap(&arr[0], &arr[i], &count);
         count++;
         
         // Heapify root element to get highest element at root again
@@ -91,14 +91,5 @@ int heapSort(int arr[], int n)
     return count;
 
 }
-  
-// Print an array
-void printArray(int arr[], int n) 
-{
-    for (int i = 0; i < n; ++i)
-      printf("%d ", arr[i]);
-    printf("\n");
-}
-  
  
 

@@ -2,14 +2,14 @@
 #include <time.h>
 #include <stdlib.h>
 
-//#include "quick.c"
-//#include "merge.c"
+#include "quick.c"
+#include "merge.c"
 #include "insertion.c"
 #include "selection.c"
-//#include "bubble.c"
+#include "bubble.c"
 //#include "heap.c"
 
-#define MAX_N 1024
+#define MAX_N 1048576
 
 void printArray(int arr[], int n)
 {
