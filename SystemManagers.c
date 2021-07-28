@@ -11,7 +11,7 @@
 #include "bubble.c"
 #include "heap.c"
 
-#define MAX_N 1048576
+#define MAX_N 524288
 
 typedef char string30[31];
 
