@@ -9,18 +9,17 @@
     1. Output is CPU time (not wall time).
     2. The displayed output shows 6 digits after the decimal point.
 */ 
-
-#define CPU_TIME  (1)
 #include "SystemManagers.c"
 
-int data[MAX_N];
-double sum = 0;
-double add = 1;
-long int count = 0;
-
-string30 sCount;
+#define CPU_TIME  (1)
 
 int main () {
+    double sum = 0;
+    double add = 1;
+    int i;
+	int data[MAX_N];
+	long int count;
+	
     // Start measuring time
     struct timespec begin, end; 
 
@@ -36,7 +35,7 @@ int main () {
 #endif    
 
     generateData(data, MAX_N);
-	count = mergeSort(data, 0, MAX_N-1);
+    count = heapSort(data, MAX_N);
     
     // Stop measuring time and calculate the elapsed time
 #if CPU_TIME 
@@ -54,9 +53,9 @@ int main () {
     long nanoseconds = end.tv_nsec - begin.tv_nsec;
     double elapsed = seconds + nanoseconds*1e-9;
     
-    convertToCommaFormat(count, sCount);
-    printf("\nMAX_N: %d\nCount = %s\n", MAX_N, sCount);
+    printf("Result: %.20f\n", sum);
     
+    printf("CPU Time measured: %lf in seconds.\n", elapsed);
     printf("CPU Time measured: %lf in milliseconds.\n", elapsed * 1000); // multiply seconds by 1000 to get milliseconds
     
     return 0;
