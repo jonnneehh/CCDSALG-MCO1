@@ -2,7 +2,7 @@
 #include <stdio.h>
   
 // Function to swap the the position of two elements
-void swapHeap(int *a, int *b, int *count) 
+void swapHeap(int *a, int *b, long int *count) 
 {
     int temp = *a;
     (*count)++;
@@ -14,7 +14,7 @@ void swapHeap(int *a, int *b, int *count)
     (*count)++;
 }
   
-void heapify(int arr[], int n, int i, int *count) 
+void heapify(int arr[], int n, int i, long int *count) 
 {
     // Find largest among root, left child and right child
    

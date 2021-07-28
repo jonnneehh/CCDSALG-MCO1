@@ -9,7 +9,7 @@
 #include "bubble.c"
 #include "heap.c"
 
-#define MAX_N 65536
+#define MAX_N 1024
 
 void printArray(int arr[], int n)
 {
@@ -19,7 +19,7 @@ void printArray(int arr[], int n)
     printf("\n\n");
 }
 
-int generateData(int data[MAX_N], int numOfData){
+void generateData(int data[MAX_N], int numOfData){
 	int i;
 	
 	srand(time(NULL));
@@ -27,7 +27,5 @@ int generateData(int data[MAX_N], int numOfData){
 	for(i = 0; i < numOfData; i++){
 		data[i] = rand();
 	}
-	
-	return data;
 }
 

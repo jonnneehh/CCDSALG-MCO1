@@ -1,7 +1,7 @@
 // C program for implementation of selection sort
 #include <stdio.h>
  
-void swapSelection(int *xp, int *yp, int *count)
+void swapSelection(int *xp, int *yp, long int *count)
 {
     int temp = *xp;
     count++; // add count when line above is executed
