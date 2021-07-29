@@ -23,9 +23,7 @@ long int insertionSort(int arr[], int n)
         	count++; // adds to count per run of loop
         	
             arr[j + 1] = arr[j];
-            count++; // add to count when arr[j+1] is changed
             j = j - 1;
-            count++; // add to count when j is changed
         }
         
         arr[j + 1] = key;
@@ -34,3 +32,4 @@ long int insertionSort(int arr[], int n)
     
     return count; // returns final value for count
 }
+
