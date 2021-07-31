@@ -11,7 +11,7 @@
 #include "bubble.c"
 #include "heap.c"
 
-#define MAX_N 524288
+#define MAX_N 1024
 
 typedef char string30[31];
 
@@ -31,6 +31,13 @@ void generateData(int data[MAX_N], int numOfData){
 	for(i = 0; i < numOfData; i++){
 		data[i] = rand();
 	}
+}
+
+void copyArray(int A[MAX_N], int B[MAX_N]){
+	int i;
+	
+	for(i = 0; i < MAX_N; i++)
+		B[i] = A[i];
 }
 
 void convertToCommaFormat(int value, string30 stringOutput){

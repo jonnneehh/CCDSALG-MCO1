@@ -5,13 +5,13 @@
 // Merges two subarrays of arr[].
 // First subarray is arr[l..m]
 // Second subarray is arr[m+1..r]
-long int merge(int arr[], int l, int m, int r)
+long int merge(int arr[], long int l, long  int m, long  int r)
 {
     long int count = 0;
     
-	int i, j, k;
-    int n1 = m - l + 1;
-    int n2 = r - m;
+	long int i, j, k;
+    long int n1 = m - l + 1;
+    long int n2 = r - m;
  
     /* create temp arrays */
     int L[n1], R[n2];
@@ -90,7 +90,7 @@ long int merge(int arr[], int l, int m, int r)
 
 /* l is for left index and r is right index of the
 sub-array of arr to be sorted */
-long int mergeSort(int arr[], int l, int r)
+long int mergeSort(int arr[], long int l, long int r)
 {
     long int count = 1;
     
@@ -99,8 +99,8 @@ long int mergeSort(int arr[], int l, int r)
         // Same as (l+r)/2, but avoids overflow for
         // large l and h
         count++; //Line below
-		int m = l + (r - l) / 2;
- 
+		long int m = l + (r - l) / 2;
+ 		
         // Sort first and second halves
         count++; //Line below
 		count += mergeSort(arr, l, m);
