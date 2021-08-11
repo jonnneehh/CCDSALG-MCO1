@@ -74,7 +74,7 @@ int main (){
 			long nanoseconds = end.tv_nsec - begin.tv_nsec;
 			double elapsed = seconds + nanoseconds*1e-9;
 			
-			totalCount += count;
+			//totalCount += count;
 			totalTime += elapsed * 1000;
 			
 			convertToCommaFormat(count, sCount);
@@ -82,7 +82,7 @@ int main (){
 			printf(" %-25lf\n", elapsed * 1000);	
 		}
 		
-		printf("\n\n%-15s%-3s %-15d", sortingAlgo, "AVE", totalCount / r);
+		printf("\n\n%-15s%-3s %-15d", sortingAlgo, "AVE", count);
 		printf(" %-25lf\n\n", totalTime / r);
 		printf("----------------------------------------\n");
 	}
